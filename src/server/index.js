@@ -49,7 +49,7 @@ let main = async () => {
     res.status(404).send('404 error')
   })
   httpServer.listen(4000, function () {
-    debug('Server API running on 8080')
+    debug('Server API running on 4000')
   })
 
   // Cleanup function - this can include any sync, async cleanups

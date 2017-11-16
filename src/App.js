@@ -40,7 +40,7 @@ class App extends Component {
       <div className='App'>
         <header className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
-          <div className='App-title'>Ugam Employee Database</div>
+          <div className='App-title'>Westeros Employee Database</div>
         </header>
         <EmpTable
           employees={this.state.employees}

@@ -10,14 +10,18 @@ employees.push({
   firstName: 'jon',
   lastName: 'snow',
   gender: 'male',
-  salary: '$20,000'
+  salary: '$20,000',
+  designation: 'King in the North',
+  location: 'Winterfell'
 })
 employees.push({
   id: '102',
   firstName: 'danerys',
   lastName: 'targeryn',
   gender: 'female',
-  salary: '$25,000'
+  salary: '$25,000',
+  designation: 'Lady Regant of the Seven Kingdoms',
+  location: 'Dragonstone'
 })
 
 employees.push({
@@ -25,7 +29,9 @@ employees.push({
   firstName: 'tyrion',
   lastName: 'lannister',
   gender: 'male',
-  salary: '$17,000'
+  salary: '$17,000',
+  designation: 'Hand of the Queen',
+  location: 'Dragonstone'
 })
 
 employees.push({
@@ -33,7 +39,9 @@ employees.push({
   firstName: 'petyr',
   lastName: 'baelish',
   gender: 'male',
-  salary: '$12,000'
+  salary: '$12,000',
+  designation: 'Lord protector of Vale',
+  location: null
 })
 
 employees.push({
@@ -41,7 +49,9 @@ employees.push({
   firstName: 'arya',
   lastName: 'stark',
   gender: 'female',
-  salary: '$8,000'
+  salary: '$8,000',
+  designation: 'Lady of Winterfell',
+  location: 'Winterfell'
 })
 
 employees.push({
@@ -49,7 +59,9 @@ employees.push({
   firstName: 'cersei',
   lastName: 'baratheon',
   gender: 'female',
-  salary: '$50,000'
+  salary: '$50,000',
+  designation: 'Queen Regent',
+  location: "King's Landing"
 })
 
 employees.push({
@@ -57,7 +69,9 @@ employees.push({
   firstName: 'jamie',
   lastName: 'lannister',
   gender: 'male',
-  salary: '$25,000'
+  salary: '$25,000',
+  designation: "Lord Commander of King's guard",
+  location: "King's Landing"
 })
 
 employees.push({
@@ -65,7 +79,9 @@ employees.push({
   firstName: 'varys',
   lastName: '',
   gender: 'male',
-  salary: '$15,000'
+  salary: '$15,000',
+  designation: 'Master of Whisperers',
+  location: 'Dragonstone'
 })
 
 employees.push({
@@ -73,7 +89,9 @@ employees.push({
   firstName: 'davos',
   lastName: 'seaworth',
   gender: 'male',
-  salary: '$200'
+  salary: '$200',
+  designation: 'Knight',
+  location: 'Winterfell'
 })
 
 employees.push({
@@ -81,12 +99,21 @@ employees.push({
   firstName: 'bran',
   lastName: 'stark',
   gender: 'male',
-  salary: '$25,000'
+  salary: '$25,000',
+  designation: 'Three Eyed Raven',
+  location: 'Winterfell'
 })
 
 module.exports = {
-  findAll: async () => employees,
-  findById: async (id) => find(employees, 'id')
+  findAll: async () =>
+    employees.map(({ id, firstName, lastName, gender, salary }) => ({
+      id,
+      firstName,
+      lastName,
+      gender,
+      salary
+    })),
+  findById: async id => find(employees, 'id')
 }
 
 // /////////////////////////////////////////////

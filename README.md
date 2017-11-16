@@ -19,6 +19,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - [Project Overview](#project-overview)
 - [Available Scripts](#available-scripts)
+  - [npm install](#npm-install)
   - [npm start](#npm-start)
   - [npm run server:start](#npm-run-serverstart)
 - [Tasks Assigned](#tasks-assigned)
@@ -38,6 +39,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Scripts Available
 
 Below you will find some information on how to perform common tasks.<br>
+
+### `npm install`
+  - To install dependencies listed in `package.json`.
 
 ### `npm start`
   - To start client, run `npm start` on a terminal in the project folder.
